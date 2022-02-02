@@ -1,10 +1,10 @@
 import "./App.css";
-import ColorBox from "./ColorBox";
+import RandomColorGrid from "./RandomColorGrid";
 
 function App() {
   return (
     <div className="App">
-      <ColorBox />
+      <RandomColorGrid />
     </div>
   );
 }
