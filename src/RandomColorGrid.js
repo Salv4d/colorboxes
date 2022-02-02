@@ -3,10 +3,16 @@ import ColorBox from "./ColorBox";
 import "./RandomColorGrid.css";
 
 class RandomColorGrid extends Component {
+  static defaultProps = {
+    boxNum: 12,
+  };
+
   render() {
     return (
       <div className="RandomColorGrid">
-        <ColorBox />
+        {[...Array(12).keys()].map((val) => (
+          <ColorBox key={val} />
+        ))}
       </div>
     );
   }
