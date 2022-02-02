@@ -6,6 +6,11 @@ class ColorBox extends Component {
     color: "black",
   };
 
+  constructor(props) {
+    super(props);
+    this.state = { color: "black" };
+  }
+
   render() {
     return (
       <div
