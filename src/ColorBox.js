@@ -1,5 +1,6 @@
 import { Component } from "react";
 import "./ColorBox.css";
+import { choice } from "./helpers";
 
 class ColorBox extends Component {
   static defaultProps = {
@@ -53,9 +54,7 @@ class ColorBox extends Component {
   }
 
   pickColor() {
-    const { colorList } = this.props;
-    const rand = Math.floor(Math.random() * colorList.length);
-    this.setState(() => ({ color: colorList[rand] }));
+    this.setState(() => ({ color: choice(this.props.colorList) }));
   }
 
   componentDidMount() {
